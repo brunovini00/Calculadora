@@ -11,45 +11,73 @@ main {
     min-width: 375px;
     max-width: 1440px;
     padding: 30px 7.5px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    position: relative;
+    top: 80px;
 }
 
 #container__superior {
     width: 355px;
     height: 80px;
-    display: flex;
-    flex-direction: row;
     padding: 5px 10px;
     line-height: 40px;
     background-color: hsl(224, 36%, 15%);
     border-radius: 10px;
 }
 
+#container__superior h1, h2, label {
+    display: inline-block;
+    color: #fff;
+}
+
 #container__superior h1 {
     font-size: 2rem;
-    /* display: flex; */
 }
 
 #container__superior h2 {
     font-size: 1rem;
-    /* display: flex; */
+}
+
+#container__superior h3 {
+    font-size: 1rem;
 }
 
 input[type="checkbox"] {
     width: 60px;
     height: 20px;
     appearance: none;
-    background-color: #fff;
+    background-color: hsl(223, 31%, 20%);
     border-radius: 30px;
     box-shadow: inset 0px 0px 16px 1px rgba(0, 0, 0, 0.24);
     cursor: pointer;
+    position: relative;
 }
 
 input:checked[type="checkbox"] {
-    background-color: green;
+    background-color: hsl(0, 5%, 81%);
+}
+
+input[type="checkbox"]:before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    background-color: hsl(6, 63%, 50%);
+    border-radius: 8px;
+    position: absolute;
+    box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, 0.25);
+    top: 2px;
+    left: 2px;
+    transition: .4s;
+}
+
+input:checked[type="checkbox"]:before {
+    left: 42px;
+    background-color: hsl(25, 98%, 40%);
 }
 
 #container__central {
     display: grid;
     font-size: 32px;
-
 }
