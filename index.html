@@ -23,30 +23,37 @@
             </label>
         </div>
 
-        <div id="display" class="container container__central">
-            <h1>0</h1>
+        <div class="container container__central">
+            <h1 id="display"></h1>
         </div>
 
         <div id="botoes" class="container__inferior container">
-            <div class="box box__1"> <button class="botao botao__1"> 7 </button> </div>
-            <div class="box box__2"> <button class="botao botao__2"> 8 </button> </div>
-            <div class="box box__3"> <button class="botao botao__3"> 9 </button> </div>
-            <div class="box box__4"> <button class="botao botao__4"> DEL </button> </div>
-            <div class="box box__5"> <button class="botao botao__5"> 4 </button> </div>
-            <div class="box box__6"> <button class="botao botao__6"> 5 </button> </div>
-            <div class="box box__7"> <button class="botao botao__7"> 6 </button> </div>
-            <div class="box box__8"> <button class="botao botao__8"> + </button> </div>
-            <div class="box box__9"> <button class="botao botao__9"> 1 </button> </div>
-            <div class="box box__10"> <button class="botao botao__10"> 2 </button> </div>
-            <div class="box box__11"> <button class="botao botao__11"> 3 </button> </div>
-            <div class="box box__12"> <button class="botao botao__12"> - </button> </div>
-            <div class="box box__13"> <button class="botao botao__13"> . </button> </div>
-            <div class="box box__14"> <button class="botao botao__14"> 0 </button> </div>
-            <div class="box box__15"> <button class="botao botao__15"> / </button> </div>
-            <div class="box box__16"> <button class="botao botao__16"> x </button> </div>
-            <div class="box box__17"> <button class="botao botao__17"> RESET </button> </div>
-            <div class="box box__18"> <button class="botao botao__18"> = </button> </div>
+            <div class="box box__1"> <button class="botao botao__1" onclick="insert(7)"> 7 </button> </div>
+            <div class="box box__2"> <button class="botao botao__2" onclick="insert(8)"> 8 </button> </div>
+            <div class="box box__3"> <button class="botao botao__3" onclick="insert(9)"> 9 </button> </div>
+            <div class="box box__4"> <button class="botao botao__4" onclick="back()"> DEL </button> </div>
+
+            <div class="box box__5"> <button class="botao botao__5" onclick="insert(4)"> 4 </button> </div>
+            <div class="box box__6"> <button class="botao botao__6" onclick="insert(5)"> 5 </button> </div>
+            <div class="box box__7"> <button class="botao botao__7" onclick="insert(6)"> 6 </button> </div>
+            <div class="box box__8"> <button class="botao botao__8" onclick="insert('+')"> + </button> </div>
+            
+            <div class="box box__9"> <button class="botao botao__9" onclick="insert(1)"> 1 </button> </div>
+            <div class="box box__10"> <button class="botao botao__10" onclick="insert(2)"> 2 </button> </div>
+            <div class="box box__11"> <button class="botao botao__11" onclick="insert(3)"> 3 </button> </div>
+            <div class="box box__12"> <button class="botao botao__12" onclick="insert('-')"> - </button> </div>
+
+            <div class="box box__13"> <button class="botao botao__13" onclick="insert(',')"> . </button> </div>
+            <div class="box box__14"> <button class="botao botao__14" onclick="insert(0)"> 0 </button> </div>
+            <div class="box box__15"> <button class="botao botao__15" onclick="insert('/')"> / </button> </div>
+            <div class="box box__16"> <button class="botao botao__16" onclick="insert('x')"> x </button> </div>
+
+            <div class="box box__17"> <button class="botao botao__17" onclick="clean()"> RESET </button> </div>
+            <div class="box box__18"> <button class="botao result" onclick="calcular()"> = </button> </div>
         </div>
     </main>
+    
+    <script src="./calc.js"></script>
+
 </body>
 </html>
