@@ -1,3 +1,10 @@
+/* (key background) */
+/* (key shadow) */
+/* (key background, toggle) */
+/* (key shadow) */
+/* (key background) */
+/* (key shadow) */
+/* (text) */
 * {
   font-family: 'Spartan', sans-serif;
 }
@@ -137,6 +144,7 @@ input:checked[type="checkbox"]:before {
 }
 
 .container__inferior {
+  min-height: 70%;
   height: 500px;
   padding: 30px 30px;
   display: -ms-grid;
