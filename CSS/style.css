@@ -1,17 +1,65 @@
-/* (key background) */
-/* (key shadow) */
-/* (key background, toggle) */
-/* (key shadow) */
-/* (key background) */
-/* (key shadow) */
-/* (text) */
+.theme__1 {
+  /* #### Backgrounds */
+  --background-1: hsl(222, 26%, 31%);
+  /* (main background) */
+  --background-2: hsl(223, 31%, 20%);
+  /* (toggle background, keypad background) */
+  --background-3: hsl(224, 36%, 15%);
+  /* (screen background) */
+  /* #### Keys */
+  --key1-1: hsl(225, 21%, 49%);
+  /* (key background) */
+  --key1-2: hsl(224, 28%, 35%);
+  /* (key shadow) */
+  --key2-1: hsl(6, 63%, 50%);
+  /* (key background, toggle) */
+  --key2-2: hsl(6, 70%, 34%);
+  /* (key shadow) */
+  --key3-1: hsl(30, 25%, 89%);
+  /* (key background) */
+  --key3-2: hsl(28, 16%, 65%);
+  /* (key shadow) */
+  /* #### Text */
+  --key-color: hsl(221, 14%, 31%);
+  --text-color: rgb(255, 255, 255);
+  /* (text) */
+}
+
+.theme__2 {
+  /* #### Backgrounds */
+  --background-1: hsl(0, 0%, 90%);
+  /* (main background) */
+  --background-2: hsl(0, 5%, 81%);
+  /* (toggle background, keypad background) */
+  --background-3: hsl(0, 0%, 93%);
+  /* (screen background) */
+  /* #### Keys */
+  --key1-1: hsl(185, 42%, 37%);
+  /* (key background) */
+  --key1-2: hsl(185, 58%, 25%);
+  /* (key shadow) */
+  --key2-1: hsl(25, 98%, 40%);
+  /* (key background, toggle) */
+  --key2-2: hsl(25, 99%, 27%);
+  /* (key shadow) */
+  --key3-1: hsl(45, 7%, 89%);
+  /* (key background) */
+  --key3-2: hsl(35, 11%, 61%);
+  /* (key shadow) */
+  /* #### Text */
+  --key-color: rgb(255, 255, 255);
+  /* (text) */
+  --text-color: hsl(60, 10%, 19%);
+  /*  */
+}
+
 * {
   font-family: 'Spartan', sans-serif;
 }
 
 body {
   font-family: 'Spartan', sans-serif;
-  background-color: #3a4764;
+  background-color: var(--background-1);
   height: 100vh;
   width: 100vw;
   display: -webkit-box;
@@ -49,14 +97,14 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #182034;
+  background-color: var(--background-1);
   border-radius: 10px;
   position: relative;
 }
 
 .container__superior h1, h2, label {
   display: inline-block;
-  color: #fff;
+  color: var(--text-color);
   position: absolute;
 }
 
@@ -125,13 +173,13 @@ input:checked[type="checkbox"]:before {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #182034;
+  background-color: var(--background-3);
   border-radius: 15px;
 }
 
 .container__central h1 {
   font-size: 3em;
-  color: #fff;
+  color: var(--text-color);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -150,7 +198,7 @@ input:checked[type="checkbox"]:before {
   display: -ms-grid;
   display: grid;
   border-radius: 15px;
-  background-color: #232c43;
+  background-color: var(--background-2);
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
   grid-gap: 15px 15px;
@@ -186,26 +234,26 @@ input:checked[type="checkbox"]:before {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #eae3dc;
-  color: #232c43;
+  background-color: var(--key3-1);
+  color: var(--key-color);
   border: none;
   border-radius: 8px;
-  -webkit-box-shadow: 0px 5px #b4a597;
-          box-shadow: 0px 5px #b4a597;
+  -webkit-box-shadow: 0px 5px var(--key3-2);
+          box-shadow: 0px 5px var(--key3-2);
   cursor: pointer;
 }
 
 .result {
-  background-color: #d03f2f;
-  -webkit-box-shadow: 0px 5px #93261a;
-          box-shadow: 0px 5px #93261a;
-  color: #fff;
+  background-color: var(--key2-1);
+  -webkit-box-shadow: 0px 5px var(--key2-2);
+          box-shadow: 0px 5px var(--key2-2);
+  color: var(--text-color);
 }
 
 .botao__4, .botao__17 {
-  background-color: #637097;
-  -webkit-box-shadow: 0px 5px #404e72;
-          box-shadow: 0px 5px #404e72;
-  color: #fff;
+  background-color: var(--key1-1);
+  -webkit-box-shadow: 0px 5px var(--key1-2);
+          box-shadow: 0px 5px var(--key1-2);
+  color: var(--text-color);
 }
 /*# sourceMappingURL=style.css.map */

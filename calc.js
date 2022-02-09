@@ -1,6 +1,10 @@
-const resultado = document.querySelector('.display')
-const calcular = document.querySelector('.result')
-const keys = document.querySelectorAll('keys')
+const body = document.getElementById('body'),
+    resultado = document.querySelector('.display'),
+    calcular = document.querySelector('.result'),
+    theme1 = document.querySelector('.theme__1'),
+    theme2 = document.querySelector('.theme__2');
+    
+
 
 // if(resultado = '') {
 //     resultado.innerHTML = resultado.innerHTML.substring(0,2)
@@ -30,55 +34,17 @@ function calc() {
         
 }
 
+// theme selection
 
 
+theme1.addEventListener('click', function(){
 
+    theme1.classList.remove('theme__1')
+    theme1.classList.add('theme__2')
+})
 
+theme2.addEventListener('click', function(){
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function insert(num) {
-//     var numero = document.getElementById('display').innerHTML
-//     document.getElementById('display').innerHTML = numero + num
-// }
-
-// function clean() {
-//     document.getElementById('display').innerHTML = ""
-// }
-
-// function back() {
-//     var resultado =document.getElementById('display').innerHTML
-//     document.getElementById('display').innerHTML = resultado.substring(0, resultado.length -1)
-// }
-
-// function calcular(params) {
-//     var resultado =document.getElementById('display').innerHTML
-
-//     if (resultado) {
-//         document.getElementById('display').innerHTML = eval(resultado).toFixed(2)
-//     }
-//     else {
-//         var resultado =document.getElementById('display').innerHTML = 'ERROR'
-//     }
-// }
+    theme2.classList.remove('theme__2')
+    theme2.classList.add('theme__1')
+})

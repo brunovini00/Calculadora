@@ -1,21 +1,44 @@
-$mainBackgroundTheme1: hsl(222, 26%, 31%);
-$keypadBackgroundTheme1: hsl(223, 31%, 20%);
-$screenBackgroundTheme1: hsl(224, 36%, 15%);
-$key1-1: hsl(225, 21%, 49%); /* (key background) */
-$key1-2: hsl(224, 28%, 35%); /* (key shadow) */
-$key2-1: hsl(6, 63%, 50%); /* (key background, toggle) */
-$key2-2: hsl(6, 70%, 34%); /* (key shadow) */
-$keyBackgroundtheme1: hsl(30, 25%, 89%); /* (key background) */
-$keyBackgroundthemeShadow1: hsl(28, 16%, 65%); /* (key shadow) */
-$key-color: hsl(221, 14%, 31%);
-$text-color: rgb(255, 255, 255); /* (text) */
+.theme__1{
+    /* #### Backgrounds */
+    --background-1: hsl(222, 26%, 31%); /* (main background) */
+    --background-2: hsl(223, 31%, 20%); /* (toggle background, keypad background) */
+    --background-3: hsl(224, 36%, 15%); /* (screen background) */
 
+/* #### Keys */
+    --key1-1: hsl(225, 21%, 49%); /* (key background) */
+    --key1-2: hsl(224, 28%, 35%); /* (key shadow) */
 
+    --key2-1: hsl(6, 63%, 50%); /* (key background, toggle) */
+    --key2-2: hsl(6, 70%, 34%); /* (key shadow) */
 
-$backgroundColorTheme2: hsl(222, 26%, 31%);
-$keypadBackgroundTheme2: hsl(223, 31%, 20%);
-$screenBackgroundTheme2: hsl(224, 36%, 15%);
+    --key3-1: hsl(30, 25%, 89%); /* (key background) */
+    --key3-2: hsl(28, 16%, 65%); /* (key shadow) */
 
+/* #### Text */
+    --key-color: hsl(221, 14%, 31%);
+    --text-color: rgb(255, 255, 255); /* (text) */
+}
+
+.theme__2{
+    /* #### Backgrounds */
+        --background-1: hsl(0, 0%, 90%); /* (main background) */
+        --background-2: hsl(0, 5%, 81%); /* (toggle background, keypad background) */
+        --background-3: hsl(0, 0%, 93%); /* (screen background) */
+    
+    /* #### Keys */
+        --key1-1: hsl(185, 42%, 37%); /* (key background) */
+        --key1-2: hsl(185, 58%, 25%); /* (key shadow) */
+    
+        --key2-1: hsl(25, 98%, 40%); /* (key background, toggle) */
+        --key2-2: hsl(25, 99%, 27%); /* (key shadow) */
+    
+        --key3-1: hsl(45, 7%, 89%); /* (key background) */
+        --key3-2: hsl(35, 11%, 61%); /* (key shadow) */
+    
+    /* #### Text */
+        --key-color: rgb(255, 255, 255); /* (text) */
+        --text-color: hsl(60, 10%, 19%); /*  */
+    }
 
 * {
     font-family: 'Spartan', sans-serif;
@@ -23,7 +46,7 @@ $screenBackgroundTheme2: hsl(224, 36%, 15%);
 
 body {
     font-family: 'Spartan', sans-serif;
-    background-color: $mainBackgroundTheme1; 
+    background-color: var(--background-1); 
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -46,14 +69,14 @@ main {
     padding: 5px 30px;
     display: flex;
     align-items: center;
-    background-color: $screenBackgroundTheme1;
+    background-color: var(--background-1);
     border-radius: 10px;
     position: relative;
 }
 
 .container__superior h1, h2, label {
     display: inline-block;
-    color: #fff;
+    color: var(--text-color);
     position: absolute;
 }
 
@@ -80,7 +103,7 @@ input[type="checkbox"] {
     width: 60px;
     height: 20px;
     appearance: none;
-    background-color: $keypadBackgroundTheme1;
+    background-color: hsl(223, 31%, 20%);
     border-radius: 30px;
     box-shadow: inset 0px 0px 16px 1px rgba(0, 0, 0, 0.24);
     cursor: pointer;
@@ -115,13 +138,13 @@ input:checked[type="checkbox"]:before {
     padding: 40px 30px;
     margin: 20px 0px;
     justify-content: center;
-    background-color: hsl(224, 36%, 15%);
+    background-color: var(--background-3);
     border-radius: 15px;
 }
 
 .container__central h1{
     font-size: 3em;
-    color: #fff;
+    color: var(--text-color);
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -133,7 +156,7 @@ input:checked[type="checkbox"]:before {
     padding: 30px 30px;
     display: grid;
     border-radius: 15px;
-    background-color: hsl(223, 31%, 20%);
+    background-color: var(--background-2);
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 15px 15px;
 }
@@ -158,23 +181,23 @@ input:checked[type="checkbox"]:before {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: hsl(30, 25%, 89%);
-    color: hsl(223, 31%, 20%);
+    background-color: var(--key3-1);
+    color: var(--key-color);
     border: none;
     border-radius: 8px;
-    box-shadow: 0px 5px hsl(28, 16%, 65%);
+    box-shadow: 0px 5px var(--key3-2);
     cursor: pointer;
 }
 
 .result {
-    background-color: hsl(6, 63%, 50%);
-    box-shadow: 0px 5px hsl(6, 70%, 34%);
-    color: #fff;
+    background-color: var(--key2-1);
+    box-shadow: 0px 5px var(--key2-2);
+    color: var(--text-color);
 }
 
 .botao__4, .botao__17 {
-    background-color: hsl(225, 21%, 49%);
-    box-shadow: 0px 5px hsl(224, 28%, 35%);
-    color: #fff;
+    background-color: var(--key1-1);
+    box-shadow: 0px 5px var(--key1-2);
+    color: var(--text-color);
 }
 
