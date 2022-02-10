@@ -37,13 +37,13 @@ function calc() {
 // theme selection
 
 
-theme1.addEventListener('click', function(){
+theme1.addEventListener('change', function(){
 
     theme1.classList.remove('theme__1')
     theme1.classList.add('theme__2')
 })
 
-theme2.addEventListener('click', function(){
+theme2.addEventListener('change', function(){
 
     theme2.classList.remove('theme__2')
     theme2.classList.add('theme__1')

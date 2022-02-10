@@ -21,24 +21,24 @@
 
 .theme__2{
     /* #### Backgrounds */
-        --background-1: hsl(0, 0%, 90%); /* (main background) */
-        --background-2: hsl(0, 5%, 81%); /* (toggle background, keypad background) */
-        --background-3: hsl(0, 0%, 93%); /* (screen background) */
+    --background-1: hsl(0, 0%, 90%); /* (main background) */
+    --background-2: hsl(0, 5%, 81%); /* (toggle background, keypad background) */
+    --background-3: hsl(0, 0%, 93%); /* (screen background) */
     
     /* #### Keys */
-        --key1-1: hsl(185, 42%, 37%); /* (key background) */
-        --key1-2: hsl(185, 58%, 25%); /* (key shadow) */
-    
-        --key2-1: hsl(25, 98%, 40%); /* (key background, toggle) */
-        --key2-2: hsl(25, 99%, 27%); /* (key shadow) */
-    
-        --key3-1: hsl(45, 7%, 89%); /* (key background) */
-        --key3-2: hsl(35, 11%, 61%); /* (key shadow) */
+    --key1-1: hsl(185, 42%, 37%); /* (key background) */
+    --key1-2: hsl(185, 58%, 25%); /* (key shadow) */
+
+    --key2-1: hsl(25, 98%, 40%); /* (key background, toggle) */
+    --key2-2: hsl(25, 99%, 27%); /* (key shadow) */
+
+    --key3-1: hsl(45, 7%, 89%); /* (key background) */
+    --key3-2: hsl(35, 11%, 61%); /* (key shadow) */
     
     /* #### Text */
-        --key-color: rgb(255, 255, 255); /* (text) */
-        --text-color: hsl(60, 10%, 19%); /*  */
-    }
+    --key-color: hsl(221, 14%, 31%); /* (text) */
+    --text-color: hsl(60, 10%, 19%); /*  */
+}
 
 * {
     font-family: 'Spartan', sans-serif;
@@ -72,53 +72,53 @@ main {
     background-color: var(--background-1);
     border-radius: 10px;
     position: relative;
-}
 
-.container__superior h1, h2, label {
-    display: inline-block;
-    color: var(--text-color);
-    position: absolute;
-}
+    h1, h2, label {
+        display: inline-block;
+        color: var(--text-color);
+        position: absolute;
+    }
 
-.container__superior h1 {
-    font-size: 2rem;
-}
+    h1 {
+        font-size: 2rem;
+    }
 
-.container__superior h2, label {
-    font-size: 1rem;
-    display: inline;
-    position: absolute;
-    text-align: center;
-}
-
-.container__superior h2 {
-    right: 100px;
-}
-
-.container__superior label {
-    right: 10px;
+    h2, label {
+        font-size: 1rem;
+        display: inline;
+        position: absolute;
+        text-align: center;
+    }
+    
+    h2 {
+        right: 100px;
+    }
+    
+    label {
+        right: 10px;
+    }
 }
 
 input[type="checkbox"] {
     width: 60px;
     height: 20px;
     appearance: none;
-    background-color: hsl(223, 31%, 20%);
+    background-color: var(--background-2);
     border-radius: 30px;
     box-shadow: inset 0px 0px 16px 1px rgba(0, 0, 0, 0.24);
     cursor: pointer;
     position: relative;
 }
 
-input:checked[type="checkbox"] {
-    background-color: hsl(0, 5%, 81%);
-}
+// input:checked[type="checkbox"] {
+//     background-color: hsl(0, 5%, 81%);
+// }
 
 input[type="checkbox"]:before {
     content: '';
     width: 16px;
     height: 16px;
-    background-color: hsl(6, 63%, 50%);
+    background-color: var(--key2-1);
     border-radius: 8px;
     position: absolute;
     box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, 0.25);
@@ -129,7 +129,6 @@ input[type="checkbox"]:before {
 
 input:checked[type="checkbox"]:before {
     left: 42px;
-    background-color: hsl(25, 98%, 40%);
 }
 
 .container__central {
@@ -140,14 +139,14 @@ input:checked[type="checkbox"]:before {
     justify-content: center;
     background-color: var(--background-3);
     border-radius: 15px;
-}
 
-.container__central h1{
-    font-size: 3em;
-    color: var(--text-color);
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    h1{
+        font-size: 3em;
+        color: var(--text-color);
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
 }
 
 .container__inferior {
@@ -166,7 +165,7 @@ input:checked[type="checkbox"]:before {
     cursor: pointer;
 }
 
-.container__inferior .box__17 {
+.box__17 {
     grid-column: 1/3;
 }
 
