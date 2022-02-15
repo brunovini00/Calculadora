@@ -54,7 +54,7 @@ body {
     align-items: center;
 }
 
-main {
+form {
     min-width: 345px;
     width: 660px;
     display: flex;
@@ -63,7 +63,7 @@ main {
     margin: auto;
 }
 
-.container__superior {
+.calculator__header {
     /* width: 100%; */
     height: 80px;
     padding: 5px 30px;
@@ -73,7 +73,7 @@ main {
     border-radius: 10px;
     position: relative;
 
-    h1, h2, label {
+    h1, legend, fieldset {
         display: inline-block;
         color: var(--text-color);
         position: absolute;
@@ -83,52 +83,20 @@ main {
         font-size: 2rem;
     }
 
-    h2, label {
+    legend, fieldset {
         font-size: 1rem;
         display: inline;
         position: absolute;
         text-align: center;
     }
     
-    h2 {
-        right: 100px;
+    legend {
+        right: 120px;
     }
     
-    label {
+    fieldset {
         right: 10px;
     }
-}
-
-input[type="checkbox"] {
-    width: 60px;
-    height: 20px;
-    appearance: none;
-    background-color: var(--background-2);
-    border-radius: 30px;
-    box-shadow: inset 0px 0px 16px 1px rgba(0, 0, 0, 0.24);
-    cursor: pointer;
-    position: relative;
-}
-
-// input:checked[type="checkbox"] {
-//     background-color: hsl(0, 5%, 81%);
-// }
-
-input[type="checkbox"]:before {
-    content: '';
-    width: 16px;
-    height: 16px;
-    background-color: var(--key2-1);
-    border-radius: 8px;
-    position: absolute;
-    box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, 0.25);
-    top: 2px;
-    left: 2px;
-    transition: .4s;
-}
-
-input:checked[type="checkbox"]:before {
-    left: 42px;
 }
 
 .container__central {

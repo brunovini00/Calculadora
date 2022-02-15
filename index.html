@@ -12,8 +12,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
 </head>
 <body id="body" class="theme__1">
-    <main>
-        <div id="tema" class="container__superior container">
+    <form>
+        <!-- <div id="tema" class="container__superior container">
             <h1>calc</h1>
             <h2>THEME</h2>
             <label class="switch">
@@ -21,7 +21,25 @@
                 <input class="theme" type="checkbox">
                 <span class="slider round"></span>
             </label>
-        </div>
+        </div> -->
+        <header class="calculator__header">
+            <h1 class="calculator__h1">calc</h1>
+
+            <fieldset class="calculator__fieldset">
+                <legend class="calculator__legend">THEME</legend>
+
+                <input id="theme-1" class="calculator__input calculator__input-1" type="radio" checked name="themeMode" aria-label="theme 1" value="theme-1">
+                <label for="theme-1" class="calculator__label">1</label>
+                
+                <input id="theme-2" class="calculator__input calculator__input-2" type="radio" name="themeMode" aria-label="theme 2" value="theme-2">
+                <label for="theme-2" class="calculator__label">2</label>
+
+                <input id="theme-3" class="calculator__input calculator__input-3" type="radio" name="themeMode" aria-label="theme-3" value="theme-3">
+                <label for="theme-3">3</label>
+
+                <div id="circle" class="circle theme1"></div>
+            </fieldset>
+       </header>
 
         <div class="container container__central">
             <h1 id="disp" class="display"></h1>
@@ -51,7 +69,7 @@
             <div class="box box__17"> <button class="botao botao__17" onclick="clean()"> RESET </button> </div>
             <div class="box box__18"> <button class="botao result" onclick="calc()"> = </button> </div>
         </div>
-    </main>
+    </form>
     
     <script src="./calc.js"></script>
 </html>
