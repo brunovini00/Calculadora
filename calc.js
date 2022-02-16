@@ -1,7 +1,6 @@
 const body = document.getElementById('body'),
     resultado = document.querySelector('.display'),
     calcular = document.querySelector('.result'),
-    buttonTheme= document.querySelector('.theme'),
     theme1 = document.querySelector('.theme__1'),
     theme2 = document.querySelector('.theme__2');
     
@@ -37,19 +36,15 @@ function calc() {
 
 // theme selection
 
-buttonTheme.addEventListener('click', () =>{
 
-    body.classList.add('theme__2')
-    body.classList.remove('theme__1')
-    
+theme1.addEventListener('change', function(){
+
+    theme1.classList.remove('theme__1')
+    theme1.classList.add('theme__2')
 })
 
-if(body.classList.contains('theme__2')){
-    
-    buttonTheme.addEventListener('click', () =>{
+theme2.addEventListener('change', function(){
 
-        body.classList.add('theme__1')
-        body.classList.remove('theme__2')
-        
-    })
-}
+    theme2.classList.remove('theme__2')
+    theme2.classList.add('theme__1')
+})
