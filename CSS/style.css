@@ -127,6 +127,18 @@ main {
   right: 10px;
 }
 
+.theme_number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
 input[type="checkbox"] {
   width: 60px;
   height: 20px;

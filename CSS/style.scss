@@ -99,6 +99,12 @@ main {
     }
 }
 
+.theme_number {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 input[type="checkbox"] {
     width: 60px;
     height: 20px;

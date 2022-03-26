@@ -1,50 +1,61 @@
-const body = document.getElementById('body'),
-    resultado = document.querySelector('.display'),
+var body = document.getElementById('body'),
+    checkbox = document.querySelector('.theme'),
+    display = document.querySelector('.display'),
     calcular = document.querySelector('.result'),
     theme1 = document.querySelector('.theme__1'),
-    theme2 = document.querySelector('.theme__2');
-    
-
-
-// if(resultado = '') {
-//     resultado.innerHTML = resultado.innerHTML.substring(0,2)
-// }
+    theme2 = document.querySelector('.theme__2')
 
 function insert(numb) {
-    resultado.innerHTML += numb
+    display.innerHTML += numb
 }
 
 function clean() {
-    resultado.innerHTML = ''
+    display.innerHTML = ''
+
+    display.text(display.text().substring(0,3))
 }
 
 function backspace() {
-    if(resultado.textContent) {
+    if(display.textContent) {
         let result = document.getElementById('disp').innerHTML
-        resultado.innerHTML = result.substring(0, result.length -1)
+        display.innerHTML = result.substring(0, result.length -1)
     }    
 }
 
 function calc() {
-    if(resultado.textContent != 'Erro') {
-        document.getElementById('disp').innerHTML = eval(resultado.innerHTML)
+
+    if(display.textContent != 'Erro') {
+        document.getElementById('disp').innerHTML = eval(display.innerHTML)
     }
 
-    resultado.innerHTML = resultado.innerHTML.substring(0,16)
+
         
 }
 
 // theme selection
 
+checkbox.addEventListener('change', function(){
 
-theme1.addEventListener('change', function(){
+    if(this.checked) {
+        theme1.classList.add('theme__2')
+        theme1.classList.remove('theme__1')
+    }
 
-    theme1.classList.remove('theme__1')
-    theme1.classList.add('theme__2')
+    if(this.checked == false) {
+        theme1.classList.add('theme__1')
+        theme1.classList.remove('theme__2')
+    }
+
 })
 
-theme2.addEventListener('change', function(){
 
-    theme2.classList.remove('theme__2')
-    theme2.classList.add('theme__1')
-})
+
+
+
+
+
+
+
+
+
+
