@@ -30,6 +30,12 @@ function calc() {
     if(display.value != 'Erro') {
         document.getElementById('disp').value = eval(display.value)
     }
+
+    if(display.value == 'undefined'){
+
+        display.value = ""
+        
+    }
  
 }
 

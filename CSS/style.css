@@ -11,14 +11,26 @@
   /* (key background) */
   --key1-2: hsl(224, 28%, 35%);
   /* (key shadow) */
+  --key1-3: hsla(225, 21%, 49%, 0.9);
+  /* (key background active) */
+  --key1-4: hsl(224, 28%, 35%, 0.9);
+  /* (key shadow active) */
   --key2-1: hsl(6, 63%, 50%);
   /* (key background, toggle) */
   --key2-2: hsl(6, 70%, 34%);
+  /* (key shadow) */
+  --key2-3: hsl(6, 63%, 50%, 0.9);
+  /* (key background, toggle) */
+  --key2-4: hsl(6, 70%, 34%, 0.9);
   /* (key shadow) */
   --key3-1: hsl(30, 25%, 89%);
   /* (key background) */
   --key3-2: hsl(28, 16%, 65%);
   /* (key shadow) */
+  --key3-3: hsla(30, 25%, 89%, 0.9);
+  /* (key background) */
+  --key3-4: hsla(29, 16%, 65%, 0.9);
+  /* (key shadow active) */
   /* #### Text */
   --key-color: hsl(221, 14%, 31%);
   --text-color: rgb(255, 255, 255);
@@ -258,22 +270,46 @@ input:checked[type="checkbox"]:before {
   color: var(--key-color);
   border: none;
   border-radius: 8px;
-  -webkit-box-shadow: 0px 5px var(--key3-2);
-          box-shadow: 0px 5px var(--key3-2);
+  -webkit-box-shadow: 0px 7px var(--key3-2);
+          box-shadow: 0px 7px var(--key3-2);
   cursor: pointer;
+}
+
+.botao:active {
+  background-color: var(--key3-3);
+  -webkit-box-shadow: 0px 7px var(--key3-4);
+          box-shadow: 0px 7px var(--key3-4);
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
 }
 
 .result {
   background-color: var(--key2-1);
-  -webkit-box-shadow: 0px 5px var(--key2-2);
-          box-shadow: 0px 5px var(--key2-2);
+  -webkit-box-shadow: 0px 7px var(--key2-2);
+          box-shadow: 0px 7px var(--key2-2);
   color: var(--text-color);
+}
+
+.result:active {
+  background-color: var(--key2-3);
+  -webkit-box-shadow: 0px 7px var(--key2-4);
+          box-shadow: 0px 7px var(--key2-4);
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
 }
 
 .botao__4, .botao__17 {
   background-color: var(--key1-1);
-  -webkit-box-shadow: 0px 5px var(--key1-2);
-          box-shadow: 0px 5px var(--key1-2);
+  -webkit-box-shadow: 0px 7px var(--key1-2);
+          box-shadow: 0px 7px var(--key1-2);
   color: var(--text-color);
+}
+
+.botao__4:active, .botao__17:active {
+  background-color: var(--key1-3);
+  -webkit-box-shadow: 0px 5px var(--key1-4);
+          box-shadow: 0px 5px var(--key1-4);
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
 }
 /*# sourceMappingURL=style.css.map */
