@@ -28,7 +28,9 @@ function backspace() {
 function calc() {
 
     if(display.value != 'Erro') {
-        document.getElementById('disp').value = eval(display.value)
+        
+        display.value = eval(display.value).toFixed(2)
+
     }
 
     if(display.value == 'undefined'){
@@ -54,15 +56,3 @@ checkbox.addEventListener('change', function(){
     }
 
 })
-
-
-
-
-
-
-
-
-
-
-
-
