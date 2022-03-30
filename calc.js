@@ -29,7 +29,7 @@ function calc() {
 
     if(display.value != 'Erro') {
         
-        display.value = eval(display.value).toFixed(2)
+        display.value = eval(display.value)
 
     }
 
