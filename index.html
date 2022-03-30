@@ -16,40 +16,40 @@
         <div id="tema" class="container__superior container">
             <h1>calc</h1>
             <h2>THEME</h2>
-            <label class="switch">
+            <label for="disp" class="switch">
                 <div class="theme_number">
                     <h3>1</h3>
                     <h3>2</h3>
                 </div>
-                <input class="theme" type="checkbox" name="theme" id="theme">
+                <input class="theme" type="checkbox" name="theme" id="theme" value="0">
                 <span class="slider round"></span>
             </label>
         </div>
 
         <div class="container container__central">
-            <h1 id="disp" class="display"></h1>
+            <input type="text" name="disp" id="disp" class="display" disabled>
         </div>
 
         <div id="botoes" class="container__inferior container">
-            <div class="box box__1"> <button class="botao botao__1" onclick="insert(7)"> 7 </button> </div>
-            <div class="box box__2"> <button class="botao botao__2" onclick="insert(8)"> 8 </button> </div>
-            <div class="box box__3"> <button class="botao botao__3" onclick="insert(9)"> 9 </button> </div>
+            <div class="box box__1"> <button class="botao botao__1" onclick="insertNum(7)"> 7 </button> </div>
+            <div class="box box__2"> <button class="botao botao__2" onclick="insertNum(8)"> 8 </button> </div>
+            <div class="box box__3"> <button class="botao botao__3" onclick="insertNum(9)"> 9 </button> </div>
             <div class="box box__4"> <button class="botao botao__4" onclick="backspace()"> DEL </button> </div>
 
-            <div class="box box__5"> <button class="botao botao__5" onclick="insert(4)"> 4 </button> </div>
-            <div class="box box__6"> <button class="botao botao__6" onclick="insert(5)"> 5 </button> </div>
-            <div class="box box__7"> <button class="botao botao__7" onclick="insert(6)"> 6 </button> </div>
-            <div class="box box__8"> <button class="botao botao__8" onclick="insert('+')"> + </button> </div>
+            <div class="box box__5"> <button class="botao botao__5" onclick="insertNum(4)"> 4 </button> </div>
+            <div class="box box__6"> <button class="botao botao__6" onclick="insertNum(5)"> 5 </button> </div>
+            <div class="box box__7"> <button class="botao botao__7" onclick="insertNum(6)"> 6 </button> </div>
+            <div class="box box__8"> <button class="botao botao__8" onclick="insertNum('+')"> + </button> </div>
             
-            <div class="box box__9"> <button class="botao botao__9" onclick="insert(1)"> 1 </button> </div>
-            <div class="box box__10"> <button class="botao botao__10" onclick="insert(2)"> 2 </button> </div>
-            <div class="box box__11"> <button class="botao botao__11" onclick="insert(3)"> 3 </button> </div>
-            <div class="box box__12"> <button class="botao botao__12" onclick="insert('-')"> - </button> </div>
+            <div class="box box__9"> <button class="botao botao__9" onclick="insertNum(1)"> 1 </button> </div>
+            <div class="box box__10"> <button class="botao botao__10" onclick="insertNum(2)"> 2 </button> </div>
+            <div class="box box__11"> <button class="botao botao__11" onclick="insertNum(3)"> 3 </button> </div>
+            <div class="box box__12"> <button class="botao botao__12" onclick="insertNum('-')"> - </button> </div>
 
-            <div class="box box__13"> <button class="botao botao__13" onclick="insert('.')"> . </button> </div>
-            <div class="box box__14"> <button class="botao botao__14" onclick="insert(0)"> 0 </button> </div>
-            <div class="box box__15"> <button class="botao botao__15 keys" onclick="insert('/')"> / </button> </div>
-            <div class="box box__16"> <button class="botao botao__16 keys" onclick="insert('*')"> x </button> </div>
+            <div class="box box__13"> <button class="botao botao__13" onclick="insertNum('.')"> . </button> </div>
+            <div class="box box__14"> <button class="botao botao__14" onclick="insertNum(0)"> 0 </button> </div>
+            <div class="box box__15"> <button class="botao botao__15 keys" onclick="insertNum('/')"> / </button> </div>
+            <div class="box box__16"> <button class="botao botao__16 keys" onclick="insertNum('*')"> x </button> </div>
 
             <div class="box box__17"> <button class="botao botao__17" onclick="clean()"> RESET </button> </div>
             <div class="box box__18"> <button class="botao result" onclick="calc()"> = </button> </div>

@@ -5,31 +5,32 @@ var body = document.getElementById('body'),
     theme1 = document.querySelector('.theme__1'),
     theme2 = document.querySelector('.theme__2')
 
-function insert(numb) {
-    display.innerHTML += numb
+function insertNum(numb) {
+
+
+    var numberInsert = numb
+
+    display.value += numberInsert
+
 }
 
 function clean() {
-    display.innerHTML = ''
-
-    display.text(display.text().substring(0,3))
+    display.value = ''
 }
 
 function backspace() {
-    if(display.textContent) {
-        let result = document.getElementById('disp').innerHTML
-        display.innerHTML = result.substring(0, result.length -1)
+    if(display.value !== '') {
+        let result = document.getElementById('disp').value
+        display.value = result.substring(0, result.length -1)
     }    
 }
 
 function calc() {
 
-    if(display.textContent != 'Erro') {
-        document.getElementById('disp').innerHTML = eval(display.innerHTML)
+    if(display.value != 'Erro') {
+        document.getElementById('disp').value = eval(display.value)
     }
-
-
-        
+ 
 }
 
 // theme selection
