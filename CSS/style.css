@@ -1,7 +1,11 @@
 .theme__1 {
   /* #### Backgrounds */
   --background-1: hsl(222, 26%, 31%); /* (main background) */
-  --background-2: hsl(223, 31%, 20%); /* (toggle background, keypad background) */
+  --background-2: hsl(
+      223,
+      31%,
+      20%
+  ); /* (toggle background, keypad background) */
   --background-3: hsl(224, 36%, 15%); /* (screen background) */
   /* #### Keys */
   --key1-1: hsl(225, 21%, 49%); /* (key background) */
@@ -24,7 +28,11 @@
 .theme__2 {
   /* #### Backgrounds */
   --background-1: hsl(0, 0%, 90%); /* (main background) */
-  --background-2: hsl(0, 5%, 81%); /* (toggle background, keypad background) */
+  --background-2: hsl(
+      0,
+      5%,
+      81%
+  ); /* (toggle background, keypad background) */
   --background-3: hsl(0, 0%, 93%); /* (screen background) */
   /* #### Keys */
   --key1-1: hsl(185, 42%, 37%, 0.9); /* (key background) */
@@ -48,7 +56,8 @@
   font-family: "Spartan", sans-serif;
 }
 
-body, html {
+body,
+html {
   height: 100%;
   width: 100%;
   font-family: "Spartan", sans-serif;
@@ -63,8 +72,6 @@ main {
   width: 660px;
   display: flex;
   flex-direction: column;
-  padding: 2rem 30px;
-  margin: auto;
   position: relative;
 }
 
@@ -77,7 +84,9 @@ main {
   border-radius: 10px;
   position: relative;
 }
-.container__superior h1, .container__superior h2, .container__superior label {
+.container__superior h1,
+.container__superior h2,
+.container__superior label {
   display: inline-block;
   color: var(--text-color);
   position: absolute;
@@ -85,7 +94,8 @@ main {
 .container__superior h1 {
   font-size: 2rem;
 }
-.container__superior h2, .container__superior label {
+.container__superior h2,
+.container__superior label {
   font-size: 1rem;
   display: inline;
   position: absolute;
@@ -220,13 +230,15 @@ input:checked[type=checkbox]:before {
   transform: translateY(2px);
 }
 
-.botao__4, .botao__17 {
+.botao__4,
+.botao__17 {
   background-color: var(--key1-1);
   box-shadow: 0px 7px var(--key1-2);
   color: var(--text-color);
 }
 
-.botao__4:active, .botao__17:active {
+.botao__4:active,
+.botao__17:active {
   background-color: var(--key1-3);
   box-shadow: 0px 5px var(--key1-4);
   transform: translateY(2px);

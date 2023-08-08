@@ -1,10 +1,14 @@
-.theme__1{
+.theme__1 {
     /* #### Backgrounds */
     --background-1: hsl(222, 26%, 31%); /* (main background) */
-    --background-2: hsl(223, 31%, 20%); /* (toggle background, keypad background) */
+    --background-2: hsl(
+        223,
+        31%,
+        20%
+    ); /* (toggle background, keypad background) */
     --background-3: hsl(224, 36%, 15%); /* (screen background) */
 
-/* #### Keys */
+    /* #### Keys */
     --key1-1: hsl(225, 21%, 49%); /* (key background) */
     --key1-2: hsl(224, 28%, 35%); /* (key shadow) */
     --key1-3: hsla(225, 21%, 49%, 0.9); /* (key background active) */
@@ -20,17 +24,21 @@
     --key3-3: hsla(30, 25%, 89%, 0.9); /* (key background) */
     --key3-4: hsla(29, 16%, 65%, 0.9); /* (key shadow active) */
 
-/* #### Text */
+    /* #### Text */
     --key-color: hsl(221, 14%, 31%);
     --text-color: rgb(255, 255, 255); /* (text) */
 }
 
-.theme__2{
+.theme__2 {
     /* #### Backgrounds */
     --background-1: hsl(0, 0%, 90%); /* (main background) */
-    --background-2: hsl(0, 5%, 81%); /* (toggle background, keypad background) */
+    --background-2: hsl(
+        0,
+        5%,
+        81%
+    ); /* (toggle background, keypad background) */
     --background-3: hsl(0, 0%, 93%); /* (screen background) */
-    
+
     /* #### Keys */
     --key1-1: hsl(185, 42%, 37%, 0.9); /* (key background) */
     --key1-2: hsl(185, 58%, 25%, 0.9); /* (key shadow) */
@@ -46,21 +54,22 @@
     --key3-2: hsl(35, 11%, 61%, 0.6); /* (key shadow) */
     --key3-3: hsla(45, 7%, 89%); /* (key background) */
     --key3-4: hsla(35, 11%, 61%); /* (key shadow active) */
-    
+
     /* #### Text */
     --key-color: hsl(221, 14%, 31%); /* (text) */
     --text-color: hsl(60, 10%, 19%); /*  */
 }
 
 * {
-    font-family: 'Spartan', sans-serif;
+    font-family: "Spartan", sans-serif;
 }
 
-body, html {
+body,
+html {
     height: 100%;
     width: 100%;
-    font-family: 'Spartan', sans-serif;
-    background-color: var(--background-1); 
+    font-family: "Spartan", sans-serif;
+    background-color: var(--background-1);
     // height: 100vh;
     // width: 100vw;
     display: flex;
@@ -73,13 +82,13 @@ main {
     width: 660px;
     display: flex;
     flex-direction: column;
-    padding: 2rem 30px;
-    margin: auto;
+    // padding: 2rem 30px;
+    // margin: auto;
     position: relative;
 }
 
 .container__superior {
-    width: 100%; 
+    width: 100%;
     height: 80px;
     display: flex;
     align-items: center;
@@ -87,7 +96,9 @@ main {
     border-radius: 10px;
     position: relative;
 
-    h1, h2, label {
+    h1,
+    h2,
+    label {
         display: inline-block;
         color: var(--text-color);
         position: absolute;
@@ -97,22 +108,22 @@ main {
         font-size: 2rem;
     }
 
-    h2, label {
+    h2,
+    label {
         font-size: 1rem;
         display: inline;
         position: absolute;
         text-align: center;
     }
-    
+
     h2 {
         right: 100px;
     }
-    
+
     label {
         right: 10px;
     }
 }
-
 
 .theme_number {
     display: flex;
@@ -136,7 +147,7 @@ input[type="checkbox"] {
 // }
 
 input[type="checkbox"]:before {
-    content: '';
+    content: "";
     width: 16px;
     height: 16px;
     background-color: var(--key2-1);
@@ -145,7 +156,7 @@ input[type="checkbox"]:before {
     box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, 0.25);
     top: 2px;
     left: 2px;
-    transition: .4s;
+    transition: 0.4s;
 }
 
 input:checked[type="checkbox"]:before {
@@ -162,7 +173,7 @@ input:checked[type="checkbox"]:before {
     background-color: var(--background-3);
     border-radius: 15px;
 
-    .display{
+    .display {
         width: 90%;
         height: 80px;
         padding: 0px 10px;
@@ -175,13 +186,13 @@ input:checked[type="checkbox"]:before {
 
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-     margin: 0;
+        -webkit-appearance: none;
+        margin: 0;
     }
 
-    input[type=number] {
+    input[type="number"] {
         -moz-appearance: textfield;
-      }
+    }
 }
 
 .container__inferior {
@@ -241,13 +252,15 @@ input:checked[type="checkbox"]:before {
     transform: translateY(2px);
 }
 
-.botao__4, .botao__17 {
+.botao__4,
+.botao__17 {
     background-color: var(--key1-1);
     box-shadow: 0px 7px var(--key1-2);
     color: var(--text-color);
 }
 
-.botao__4:active, .botao__17:active {
+.botao__4:active,
+.botao__17:active {
     background-color: var(--key1-3);
     box-shadow: 0px 5px var(--key1-4);
     transform: translateY(2px);
@@ -279,8 +292,8 @@ input:checked[type="checkbox"]:before {
         align-items: center;
         background-color: var(--background-3);
         border-radius: 15px;
-    
-        .display{
+
+        .display {
             width: 100%;
             height: 80px;
             padding: 0px 10px;
